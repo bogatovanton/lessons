@@ -11,6 +11,11 @@
         <input name="input">
         <button type="submit">Отправить</button>
     </form>
-    <div>{{ input }}</div>
+    {% for event in events %}
+    <div>{{ event.id }}</div>
+    <div>{{ event.title }}</div>
+    <div>{{ event.date }}</div>
+    <div>{{ event.location }}</div>
+    {% endfor %}
 </body>
 </html>
