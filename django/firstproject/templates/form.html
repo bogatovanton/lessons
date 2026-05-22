@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Привет {{ name }}</h1>
     <form method="post">
         {% csrf_token %}
         <input name="input">
@@ -17,5 +18,10 @@
     <div>{{ event.date }}</div>
     <div>{{ event.location }}</div>
     {% endfor %}
+
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Выйти</button>
+    </form>
 </body>
 </html>
